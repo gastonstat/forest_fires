@@ -17,7 +17,7 @@ This repository provides a basic project skeleton to practice creating dynamic d
 - Work on the file `00-abstract.Rnw` (located in /paper/sections) to add a brief abstract text.
 - Work on the file `01-introduction.Rnw` (located in /paper/sections) to add some introductory lines.
 - Work on the file `02-data.Rnw` (located in /paper/sections) to write some inline code, as well as to complete the code chunk of summary statistics.
-- Work on the file `03-conclusions.Rnw` (located in /paper/sections) to include the scatterplot of temperature and wind, and write a short description of the plot.
+- Work on the file `03-plots.Rnw` (located in /paper/sections) to include the scatterplot of temperature and wind, and write a short description of the plot.
 - Create a file `04-conclusions.Rnw` in the folder `/paper/sections` and write some text with your conclusions.
 - Create a /slides directory and then create a file `slides.Rnw` with a short presentation that includes the scatterplot.
 - Work on the file `Makefile` in the parent directory to complete the targets `paper/paper.pdf`, `slides/slides.pdf`, and `images/scatterplot.png`
