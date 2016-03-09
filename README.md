@@ -1,6 +1,6 @@
 # Dynamic Documents Practice
 
-This repository provides a basic project skeleton to practice creating dynamic documents with Rnw files and the R package knitr. This is intended as a pratice for the course [Stat 259](http://gastonsanchez.com/stat259)
+This repository provides a basic project skeleton to practice creating dynamic documents with Rnw files and the R package knitr. This is intended as a pratice for the course [Stat 259](http://gastonsanchez.com/stat259).
 
 
 ## Data
@@ -19,8 +19,8 @@ This repository provides a basic project skeleton to practice creating dynamic d
 - Work on the file `02-data.Rnw` (located in /paper/sections) to write some inline code, as well as to complete the code chunk of summary statistics.
 - Work on the file `03-conclusions.Rnw` (located in /paper/sections) to include the scatterplot of temperature and wind, and write a short description of the plot.
 - Create a file `04-conclusions.Rnw` in the folder `/paper/sections` and write some text with your conclusions.
-- Create a /slides directory and then create a file `slides.Rnw` with a short presentation.
-- Work on the file `Makefile` in the parent directory to complete the targets `paper/paper.pdf`, slides/slides.pdf, and `images/scatterplot.png`
-- Run `make` from the parent directory to get the document `paper.pdf`
+- Create a /slides directory and then create a file `slides.Rnw` with a short presentation that includes the scatterplot.
+- Work on the file `Makefile` in the parent directory to complete the targets `paper/paper.pdf`, `slides/slides.pdf`, and `images/scatterplot.png`
+- Run `make` from the parent directory to get the document `paper.pdf` and `slides.pdf`
 
-Feel free to add more scripts, images, section files, code chunks, etc.
+Feel free to add more directories, scripts, images, section files, code chunks, references, etc.
