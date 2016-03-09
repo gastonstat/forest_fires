@@ -1,0 +1,37 @@
+\documentclass[12pt]{article}
+
+% packages
+\usepackage{graphicx}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[backend=bibtex]{biblatex}
+\addbibresource{references.bib}
+
+% title information
+\title{Forest Fires}
+\author{Your Name}
+
+
+\begin{document}
+\maketitle
+
+<<packages, echo = FALSE>>=
+library(xtable)
+@
+
+<<abstract, child='sections/00-abstract.Rnw', eval=TRUE>>=
+@
+
+<<introduction, child='sections/01-introduction.Rnw', eval=TRUE>>=
+@
+
+<<dataset, child='sections/02-data.Rnw', eval=TRUE>>=
+@
+
+<<plots, child='sections/03-plots.Rnw', eval=TRUE>>=
+@
+
+% add a code chunk to include the file '04-conclusions.Rnw'
+
+
+\printbibliography
+\end{document}

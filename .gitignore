@@ -1,0 +1,15 @@
+.DS_Store
+
+*.aux
+*.log
+*.out
+
+*.bbl
+*.blg
+
+*.snm
+*.toc
+*.nav
+*.vrb
+
+.Rhistory

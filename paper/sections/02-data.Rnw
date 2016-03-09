@@ -1,0 +1,19 @@
+\section{Data}
+
+The analyzed data is the Forest Fires dataset described by P. Cortez and A. Morais \cite{CortezMorais2007}
+
+<<data_fires, echo=FALSE, results='asis', message=FALSE>>=
+fires <- read.csv("../data/foresfires.csv")
+@
+
+% Write inline code to display number of rows and columns in dataset
+The data set contains ??? rows, and ??? columns.
+
+
+% complete the following code chunk to display a table 
+% with summary statistics of temperature and wind
+<<summary_stats, echo = FALSE, results='asis'>>=
+library(xtable)
+# ... compute summary stats with function 'summary()'
+# ... display them with the function 'xtable(stats)'
+@

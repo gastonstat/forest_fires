@@ -1,0 +1,8 @@
+\section{Plots}
+
+% Include the scatterplot of temperature and wind
+% and write a short description of the plot
+
+%\begin{figure}[h!]
+%\includegraphics[width=1\textwidth]{../images/scatterplot.png}
+%\end{figure}
