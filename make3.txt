@@ -1,0 +1,45 @@
+# Definition of Variables
+PAPERDIR = ./paper
+PAPER = $(PAPERDIR)/paper
+SECS = $(wildcard $(PAPERDIR)/sections/*.Rnw)
+
+SLIDESDIR = ./slides
+SLIDES = $(SLIDESDIR)/slides
+
+IMAGESDIR = ./images
+IMAGES = $(wildcard $(IMAGESDIR)/*.png)
+
+SCRIPTSDIR= ./code/scripts
+SCRIPTS= $(wildcard $(SCRIPTSDIR)/*.R)
+
+
+# ---------------------------------------------------------------
+
+
+.PHONY: data clean
+
+all: $(PAPER).pdf $(SLIDES).pdf
+
+
+# target for paper.pdf in folder /paper
+$(PAPER).pdf: $(PAPER).Rnw $(SECS) $(IMAGES)
+	Rscript -e "library(knitr); knit2pdf('$(PAPER).Rnw')"
+
+
+# target for slides.pdf in folder /slides
+$(SLIDES).pdf: $(SLIDES).Rnw $(IMAGES)
+	Rscript -e "library(knitr); knit2pdf('$(SLIDES).Rnw')"
+
+
+## Write a target for scatterplot.png in folder /images
+## (use 'scatterplot_script.R' as the dependency)
+$(IMAGES).png: $(SCRIPTS)
+	Rscript $(SCRIPTS)
+
+
+data:
+	cd data && make download_all
+
+clean:
+	@echo Clean up
+	cd paper; rm -f *.{aux,bbl,blg,log,tex,pdf,run.xml}

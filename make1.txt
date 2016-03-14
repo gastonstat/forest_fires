@@ -1,0 +1,29 @@
+.PHONY: data clean
+
+all: paper/paper.pdf slides/slides.pdf
+
+
+## Write a target for paper.pdf in folder /paper
+## (use 'paper.Rnw', the /sections files, and 'scatterplot.png' as dependencies)
+paper/paper.pdf: paper/paper.Rnw paper/sections/*.Rnw images/scatterplot.png
+	cd paper; Rscript -e "library(knitr); knit2pdf('paper.Rnw')"
+
+
+## Write a target for slides.pdf in folder /slides
+## (use 'slides.Rnw', and 'scatterplot.png' as dependencies)
+slides/slides.pdf: slides/slides.Rnw images/scatterplot.png
+	cd slides; Rscript -e "library(knitr); knit2pdf('slides.Rnw')"
+
+
+## Write a target for scatterplot.png in folder /images
+## (use 'scatterplot_script.R' as the dependency)
+images/scatterplot.png: code/scripts/scatterplot_script.R
+	cd code/scripts; Rscript scatterplot_script.R
+
+
+data:
+	cd data; make download_all
+
+clean:
+	@echo Clean up
+	cd paper; rm -f *.{aux,bbl,blg,log,tex,pdf,run.xml}
